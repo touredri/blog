@@ -3,7 +3,7 @@
 require 'rspec'
 
 RSpec.describe 'Post' do
-  subject { Post.new }
+  subject { Post.new(title: 'Robotique', text: 'interesting file', author: ) }
   before { }
 
   after do
