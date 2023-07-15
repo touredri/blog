@@ -2,9 +2,11 @@
 
 class User < ApplicationRecord
   has_many :posts, foreign_key: :author_id, dependent: :destroy
+  has_many :comments, foreign_key: :user_id, dependent: :destroy
+  has_many :likes, foreign_key: :user_id, dependent: :destroy
 
   # returns the last 3 posts of the current user
-  def user_posts
+  def user_recent_posts
     posts.order(created_at: :desc).limit(3)
   end
 
@@ -12,7 +14,7 @@ class User < ApplicationRecord
   # # can be use without instantiate new user object
   # # User.user_posts(user)
   # I added this method below for pleasure of the exercise
-  def self.user_posts(user)
+  def self.user_recent_posts(user)
     Post.where(author_id: user.id).order(created_at: :desc).limit(3)
   end
 end
