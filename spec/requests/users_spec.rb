@@ -2,11 +2,25 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Users', type: :system do
-  describe 'page content' do
+RSpec.describe UsersController, type: :controller do
+  describe 'GET #index' do
+    it 'returns a successful response' do
+      get :index
+      expect(response).to be_successful
+    end
+
+    it 'renders the index template' do
+      get :index
+      expect(response).to render_template('index')
+    end
+  end
+end
+
+RSpec.describe 'Users', type: :request do
+  describe 'GET /index' do
     it 'should show the placeholder' do
-      visit '/users'
-      expect(page).to have_content('Hello world')
+      get '/users/index'
+      expect(response.body).to include('This is the list of a user with id')
     end
   end
 end
