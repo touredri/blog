@@ -2,10 +2,10 @@
 
 class UsersController < ApplicationController
   def index
-    #@posts = Post.all
+    # @posts = Post.all
   end
 
   def show
-    #render json: User.find(params[:id])
+    # render json: User.find(params[:id])
   end
 end
