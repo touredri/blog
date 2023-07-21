@@ -1,16 +1,8 @@
-
-<div class="container">
-  <ul>
+<main>
+  <section class="all-users">
     <% @users.each do |user| %>
-      <li>
-        <div class="user-image">
-          <img src="<%= user.photo %>" alt="profile">
-        </div>
-        <div class="user-name">
-          <%= user.name %>
-          <%= user.posts_counter %>
-        </div>
-      </li>
-  <% end %>
-  </ul>
-</div>
+      <%= render "shared_view/user", user: user %>
+      <br>
+    <% end %>
+  </section>
+</main>

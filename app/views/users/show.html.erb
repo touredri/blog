@@ -1,4 +1,4 @@
-<%= render "user" %>
+<%= render "shared_view/user", user: @user %>
 
 <div class="bio">
   <h2>Bio</h2>
@@ -8,9 +8,9 @@
 <div class="posts">
   <h2>Posts</h2>
   <ul>
-    <% @user_posts.each do |post| %>
+    <% @user.user_recent_posts.each_with_index do |post, index| %>
       <li>
-       <h3>Post:</h3> <%=  post.id %>
+       <h3>Post:</h3>"#" <%=  index + 1 %>
         <div>
           <%= post.text %>
         </div>
@@ -21,6 +21,6 @@
     <% end %>
   </ul>
   <button>
-    See More
+    <%= link_to "See all post", user_posts_path(@user) %>
   </button>
 </div>
