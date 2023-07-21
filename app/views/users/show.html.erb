@@ -1,3 +1,26 @@
-<h1>
-  This is the list of a user with id
-</h1>
+<%= render "user" %>
+
+<div class="bio">
+  <h2>Bio</h2>
+  <%= @user.bio %>
+</div>
+
+<div class="posts">
+  <h2>Posts</h2>
+  <ul>
+    <% @user_posts.each do |post| %>
+      <li>
+       <h3>Post:</h3> <%=  post.id %>
+        <div>
+          <%= post.text %>
+        </div>
+        <div>
+          <h4>Comments: x</h4>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+  <button>
+    See More
+  </button>
+</div>
