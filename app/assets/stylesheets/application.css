@@ -17,3 +17,13 @@
 li {
   list-style: none;
 }
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.actions {
+  margin-top: 20px;
+}

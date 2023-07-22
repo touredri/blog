@@ -8,7 +8,12 @@
   </div>
 
   <div class="post_sp_comment">
-    <h3>comments:</h3>
+    <div class="add_post">
+      <h3>comments:</h3>
+      <button class="add_post_button">
+        <%= link_to "Add new comment", new_post_comment_path(@post) %>
+      </button>
+    </div>
     <ul>
       <% @post_comments.each do |comment| %>
         <li><%= comment.author.name %>: <%= comment.text %></li>

@@ -1,7 +1,7 @@
 <main>
   <section class="all-users">
     <%= render "shared_view/user", user: @user %>
-    <% @user_posts.each_with_index do |post, index| %>
+    <% @user.user_recent_posts.each_with_index do |post, index| %>
       <p class="post">
         <span>Post #<%= index + 1 %></span><br><br>
         <span><%= truncate(post.text, length: 200, omission: '...')%><%= link_to "See More", user_post_path(@user, post) %></span><br><br>
