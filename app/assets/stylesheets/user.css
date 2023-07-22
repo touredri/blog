@@ -53,3 +53,15 @@ ul {
   justify-content: center;
   margin: 10px;
 }
+
+.add_post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add_post button {
+  height: 34px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
