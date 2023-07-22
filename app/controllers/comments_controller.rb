@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
 
     if @comment.save
       flash[:success] = 'Comment create with success!'
-      redirect_to user_post_path(@current_user, @post)
+      redirect_to user_post_path(current_user, @post)
     else
       flash[:error] = 'Comment not created!'
       render :new
