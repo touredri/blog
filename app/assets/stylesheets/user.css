@@ -1,0 +1,56 @@
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 10px;
+}
+
+.user-info {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10%;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid #ccc;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.user-details {
+    width: 60%;
+
+}
+
+.post-counter {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.username a {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.user_comments {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.but {
+    display: flex;
+    justify-content: center;
+}
+
+.see_all {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
