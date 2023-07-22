@@ -1,4 +1,8 @@
-
-<h2>
-  Hello world
-</h2>
+<main>
+  <section class="all-users">
+    <% @users.each do |user| %>
+      <%= render "shared_view/user", user: user %>
+      <br>
+    <% end %>
+  </section>
+</main>

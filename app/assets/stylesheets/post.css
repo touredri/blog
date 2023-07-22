@@ -1,0 +1,21 @@
+.comments_likes {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.post,
+.comments {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 0;
+}
+
+.post {
+  margin-bottom: 5px;
+}
+
+.post_sp,
+.post_sp_comment {
+  padding: 10px;
+  border: 1px solid #ccc;
+}

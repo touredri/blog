@@ -2,10 +2,11 @@
 
 class UsersController < ApplicationController
   def index
-    # @posts = Post.all
+    @users = User.all
   end
 
   def show
-    # render json: User.find(params[:id])
+    @user = User.find_by(id: params[:id])
+    @recent_posts = @user.user_recent_posts
   end
 end

@@ -1,3 +1,30 @@
-<h1>
-  This is the list of a user with id
-</h1>
+<%= render "shared_view/user", user: @user %>
+
+<div class="bio">
+  <h2>Bio</h2>
+  <%= @user.bio %>
+</div>
+<div class="posts">
+  <ul>
+    <% @user.user_recent_posts.each_with_index do |post, index| %>
+      <li>
+       <h3>Post: #<%=  index + 1 %></h3>
+        <div>
+          <%= truncate(post.text, length: 150, omission: '...') %>
+          <span>
+            <%= link_to "See more", user_post_path(@user, post) %>
+          </span>
+        </div>
+        <div class="user_comments">
+          <h4>Comments: <%= post.comments_counter%>,</h4>
+          <h4>Likes: <%= post.likes_counter%></h4>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+  <div class="but">
+    <button class="see_all">
+      <%= link_to "See all post", user_posts_path(@user) %>
+    </button>
+  </div>
+</div>
