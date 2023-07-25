@@ -15,7 +15,7 @@
       </button>
     </div>
     <ul>
-      <% @post_comments.each do |comment| %>
+      <% @post_comments.includes(:author).each do |comment| %>
         <li><%= comment.author.name %>: <%= comment.text %></li>
       <% end %>
     </ul>
