@@ -84,7 +84,7 @@ And go to http://127.0.0.1:3000
 - Twitter: [@twitterhandle](https://twitter.com/Ndonyi4)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ndonyi-maurice-b5b49b22b/)
 
-- 👤 **Mercy Mugambi**
+👤 **Mercy Mugambi**
 
 - GitHub: [@Mercy Mugambi](https://github.com/mercymugambi)
 - Twitter: [@MercyMugambi15](https://twitter.com/MercyMugambi15)
