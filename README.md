@@ -78,6 +78,11 @@ And go to http://127.0.0.1:3000
 
 - GitHub: [@githubhandle](https://github.com/touredri)
 
+👤 **Author1**
+ *[Ndonyi]*
+- GitHub: [@githubhandle](https://github.com/citec-47)
+- Twitter: [@twitterhandle](https://twitter.com/Ndonyi4)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ndonyi-maurice-b5b49b22b/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
