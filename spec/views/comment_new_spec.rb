@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'rails_helper'
 RSpec.describe 'New Comment Page', type: :feature do
   before do
@@ -8,8 +9,8 @@ RSpec.describe 'New Comment Page', type: :feature do
     visit new_post_comment_path(@post)
   end
   it 'creates a new comment when submitting the form with valid data' do
-    fill_in "comment_text", with: "This is a test comment."
-    click_button "Create comment"
-    expect(page).to have_content("This is a test comment")
+    fill_in 'comment_text', with: 'This is a test comment.'
+    click_button 'Create comment'
+    expect(page).to have_content('This is a test comment')
   end
 end

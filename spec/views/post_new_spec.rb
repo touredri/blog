@@ -9,10 +9,10 @@ RSpec.describe 'New Post Page', type: :feature do
     visit new_post_path
   end
   it 'creates a new post when submitting the form with valid data' do
-    fill_in "post_title", with: "Test Post"
-    fill_in "post_text", with: "This is a test post."
-    click_button "Create Post"
+    fill_in 'post_title', with: 'Test Post'
+    fill_in 'post_text', with: 'This is a test post.'
+    click_button 'Create Post'
     visit user_path(@user)
-    expect(page).to have_content("Test Post")
+    expect(page).to have_content('Test Post')
   end
 end

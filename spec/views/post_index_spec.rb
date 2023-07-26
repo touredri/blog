@@ -8,7 +8,7 @@ RSpec.describe 'User Post Index Page', type: :feature do
     @user = User.create(name: 'John Doe', photo: 'profile_url', bio: 'I am a user.')
     @user_posts = []
     10.times do |i|
-      @user_posts << @user.posts.create(title: "Post #{i+1}", text: "This is post #{i+1}.")
+      @user_posts << @user.posts.create(title: "Post #{i + 1}", text: "This is post #{i + 1}.")
     end
     @comment1 = @user_posts[9].comments.create(text: 'Comment 1', author: @user)
     @comment2 = @user_posts[8].comments.create(text: 'Comment 2', author: @user)
@@ -59,7 +59,7 @@ RSpec.describe 'User Post Index Page', type: :feature do
 
   it 'displays the correct posts on subsequent pages' do
     # Go to the second page of posts
-    visit current_path + '?page=2'
+    visit "#{current_path}?page=2"
     # Ensure posts from 6th to 10th are not displayed on the second page
     (5..9).each do |index|
       expect(page).to_not have_content("Post #{index + 1}")
