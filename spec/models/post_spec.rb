@@ -3,7 +3,9 @@
 require 'rails_helper'
 
 describe Post, type: :model do
-  @user = User.new(name: 'Adams', photo: 'image_url', bio: 'Good', posts_counter: 0)
+  before do
+    @user = User.create(name: 'Adams', photo: 'image_url', bio: 'Good', posts_counter: 0)
+  end
   subject { Post.new(author: @user, title: 'Random', text: 'text for the post') }
 
   before { subject.save }
@@ -29,8 +31,6 @@ describe Post, type: :model do
   end
 
   it 'should update the author\'s posts_counter' do
-    Post.create(author: @user, title: 'Math', text: 'It is not magic',
-                comments_counter: 0, likes_counter: 0)
     expect(@user.posts_counter).to eq(1)
   end
 

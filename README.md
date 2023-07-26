@@ -78,6 +78,17 @@ And go to http://127.0.0.1:3000
 
 - GitHub: [@githubhandle](https://github.com/touredri)
 
+👤 **Author1**
+ *[Ndonyi]*
+- GitHub: [@githubhandle](https://github.com/citec-47)
+- Twitter: [@twitterhandle](https://twitter.com/Ndonyi4)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ndonyi-maurice-b5b49b22b/)
+
+👤 **Mercy Mugambi**
+
+- GitHub: [@Mercy Mugambi](https://github.com/mercymugambi)
+- Twitter: [@MercyMugambi15](https://twitter.com/MercyMugambi15)
+- LinkedIn: [@mercymugambi](https://www.linkedin.com/in/mercymugambi)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>

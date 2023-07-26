@@ -1,18 +1,21 @@
 <main>
   <section class="all-users">
     <%= render "shared_view/user", user: @user %>
-    <% @user.user_recent_posts.each_with_index do |post, index| %>
+    <% @user_posts.each_with_index do |post, index| %>
       <p class="post">
-        <span>Post #<%= index + 1 %></span><br><br>
+        <span>Post #<%= index + 1%>  <%= post.title %></span><br><br>
         <span><%= truncate(post.text, length: 200, omission: '...')%><%= link_to "See More", user_post_path(@user, post) %></span><br><br>
         <span class="comments_likes">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></span>
-      <ul class="comments">
-        <% post.recent_comments.each do |comment| %>
-          <% if comment.post_id === post.id %>
-            <li class="comment"><%= comment.author.name %>: <%= comment.text %> </li>
+      <% if post.comments.any? %>
+        <ul class="comments">
+          <% post.recent_comments.includes(:author).each do |comment| %>
+            <li class="comment"><%= "#{comment.author.name}: #{comment.text}" %></li>
           <% end %>
-        <% end %>
-      </ul>
+        </ul>
+      <% end %>
     <% end %>
+    <div class="pagination-links">
+      <%= will_paginate @user_posts %>
+    </div>
   </section>
 </main>
