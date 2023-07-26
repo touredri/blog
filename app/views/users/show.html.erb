@@ -8,7 +8,7 @@
   <ul>
     <% @user.user_recent_posts.each_with_index do |post, index| %>
       <li>
-       <h3>Post: #<%=  index + 1 %></h3>
+       <h3>Post: #<%=  index + 1 %>  <%= post.title %></h3>
         <div>
           <%= truncate(post.text, length: 150, omission: '...') %>
           <span>

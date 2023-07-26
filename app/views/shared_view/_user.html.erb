@@ -1,5 +1,5 @@
 <div class="user-info">
-  <div class="user-image"><%= image_tag user.photo, class: 'profile-image' %></div>
+    <img src="<%= user.photo%>" class="profile-image" alt="Profile">
   <div class='user-details'>
     <p class="name-posts"><span class="username"><%= link_to user.name, user_path(user.id) %></span> <br>
       <span class='post-counter'>Number of posts:<%= user.posts_counter %></span>
