@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
+
 RSpec.describe 'New Post Page', type: :feature do
   before do
     # Create a user to test the form
@@ -12,4 +15,4 @@ RSpec.describe 'New Post Page', type: :feature do
     visit user_path(@user)
     expect(page).to have_content("Test Post")
   end
-end# frozen_string_literal: true
+end
