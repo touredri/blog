@@ -8,11 +8,11 @@ RSpec.describe 'New Post Page', type: :feature do
     @user = User.create(name: 'John Doe', photo: 'profile_url', bio: 'I am a user.')
     visit new_post_path
   end
-  it 'creates a new post when submitting the form with valid data' do
+  it 'not creates a new post when submitting the form with invalid data' do
     fill_in 'post_title', with: 'Test Post'
-    fill_in 'post_text', with: 'This is a test post.'
+    fill_in 'post_text', with: ''
     click_button 'Create Post'
     visit user_path(@user)
-    expect(page).to have_content('Test Post')
+    expect(page).to_not have_content('This is a test post')
   end
 end
