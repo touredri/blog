@@ -1,7 +1,8 @@
 <main>
-  <section class="all-users">
+  <% if user_signed_in? %>
     <h1 class="top">Welcome <%= current_user.name %></h1>
-    <%= link_to 'Log out', destroy_user_session_path %>
+  <% end %>
+  <section class="all-users">
     <div class="add_post">
       <h3>All Users</h3>
       <button class="add_post_button">
