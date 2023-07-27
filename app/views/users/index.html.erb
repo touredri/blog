@@ -1,7 +1,9 @@
 <main>
   <section class="all-users">
+    <h1 class="top">Welcome <%= current_user.name %></h1>
+    <%= link_to session %>
     <div class="add_post">
-      <h1>All Users</h1>
+      <h3>All Users</h3>
       <button class="add_post_button">
         <%= link_to "Add post", new_post_path %>
       </button>
