@@ -1,6 +1,7 @@
 <main>
   <% if user_signed_in? %>
     <h1 class="top">Welcome <%= current_user.name %></h1>
+    <%= link_to "Logout", logout_path, method: :delete %>
   <% end %>
   <section class="all-users">
     <div class="add_post">
