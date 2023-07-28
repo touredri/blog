@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # avoid conflict with devise's logout and user/id path
+  devise_scope :user do
+    get 'logout', to: 'session#destroy', as: :logout
+  end
+  devise_for :users, controllers: { session: 'session' }
   root 'users#index'
 
   resources :users, only: %i[index show] do
