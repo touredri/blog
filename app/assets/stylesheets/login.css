@@ -1,40 +1,41 @@
 .login_form {
-    width: 100%;
-    padding: 15px;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
 }
+
 .login_form_container {
-    max-width: 530px;
-    width: 100%;
-    padding: 15px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
+  max-width: 530px;
+  width: 100%;
+  padding: 15px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 input {
-    width: 100%;
-    height: 35px;
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
+  width: 100%;
+  height: 35px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 .alert-danger a {
-    font-size: 15px;
-    padding: 5px;
-    margin: 20px 0;
-    color: blue;
+  font-size: 15px;
+  padding: 5px;
+  margin: 20px 0;
+  color: blue;
 }
 
 .submit  {
-    max-width: 45%;
+  max-width: 45%;
 }
 
 #user_name,
 #user_email,
 #user_password {
-    width: 100%;
+  width: 100%;
 }
